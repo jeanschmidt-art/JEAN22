@@ -6,7 +6,6 @@
     <title>JEAN22 aluno</title>
 </head>
 <body>
-
 <?php
 
 $nome = "Jean";
@@ -14,19 +13,17 @@ $idade = 17;
 
 ?>
 
+if ($idade >= 18) {
+    $Status = "Você é maior de idade";
+} else {
+   $Status = "Você é menor de idade";
+}
+?>
+
 <h1>Nome: <?= $nome ?></h1>
 <p>Idade: <?= $idade ?></p>
+<p>status: <?= $Status ?></p>
 
-<?php
-
-if ($idade >= 18) {
-    
-    "<p>Você é maior de idade.</p>";
-} else {
-     "<p>Você é menor de idade.</p>";
-}
-
-?>
 
 </body>
 </html>
