@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +6,26 @@
     <title>JEAN22 aluno</title>
 </head>
 <body>
+
 <?php
 
-
 $nome = "Jean";
-$idade = "17";
-
+$idade = 17;
 
 ?>
 
-<h1>nome:  <?= $nome ?></h1>
-<p>idade:  <?= $idade ?></p>
+<h1>Nome: <?= $nome ?></h1>
+<p>Idade: <?= $idade ?></p>
 
+<?php
+
+if ($idade >= 18) {
+    echo "<p>Você é maior de idade.</p>";
+} else {
+    echo "<p>Você é menor de idade.</p>";
+}
+
+?>
 
 </body>
 </html>
