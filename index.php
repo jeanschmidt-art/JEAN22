@@ -20,9 +20,10 @@ $idade = 17;
 <?php
 
 if ($idade >= 18) {
-    echo "<p>Você é maior de idade.</p>";
+    
+    "<p>Você é maior de idade.</p>";
 } else {
-    echo "<p>Você é menor de idade.</p>";
+     "<p>Você é menor de idade.</p>";
 }
 
 ?>
