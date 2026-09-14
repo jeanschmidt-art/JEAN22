@@ -11,7 +11,7 @@
 
 echo "<h1>JEAN22 aluno</h1>";
 $nome = "Jean";
-echo "<h1>Olá, $Jean,</h1>";
+echo "<h1>Olá $Jean,</h1>";
 $nome = "Jean";
 $idade = "17";
 
