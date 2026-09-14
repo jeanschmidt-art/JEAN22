@@ -11,7 +11,7 @@
 $nome = "Jean";
 $idade = 17;
 
-?>
+
 
 if ($idade >= 18) {
     $Status = "Você é maior de idade";
