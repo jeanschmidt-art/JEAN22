@@ -26,13 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <body>
 
         <form method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
             <label for="idade">Idade:</label>
             <input type="text" id="idade" name="idade">
             <button type="submit">Enviar</button>
         </form> 
 
         <?php if($resultado != "") { ?>
-            
+            <p><?= $resultado ?></p>
         <?php } ?>
 
     </body>
