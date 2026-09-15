@@ -24,6 +24,7 @@ if ($idade >= 18) {
 <p>Idade: <?= $idade ?></p>
 <p>status: <?= $Status ?></p>
 
+<form action=""></form>
 
 </body>
 </html>
