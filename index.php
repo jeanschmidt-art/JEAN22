@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome">
             <label for="idade">Idade:</label>
-            <input type="text" id="idade" name="idade">
+            <input type="number" id="idade" name="idade">
             <button type="submit">Enviar</button>
         </form> 
 
