@@ -24,7 +24,12 @@ if ($idade >= 18) {
 <p>Idade: <?= $idade ?></p>
 <p>status: <?= $Status ?></p>
 
-<form action=""></form>
+<form action="formulario" method="get">
+<label for="idade">Idade:</label>
+<input type="text" id="idade" name="idade">
+<button type="submit">Enviar</button>
+
+</form> 
 
 </body>
 </html>
