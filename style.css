@@ -8,3 +8,140 @@
     font-family: arial, sans-serif;
     margin: 20px auto;
 }
+/* ==========================================================
+   PERSONALIZAÇÃO - SISTEMA DE MÉDIA DO ALUNO
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ---------- FUNDO ---------- */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 15px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-attachment: fixed;
+}
+
+/* Bolhas de luz no fundo */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: -1;
+}
+
+body::before {
+    width: 350px;
+    height: 350px;
+    background: #7f5af0;
+    top: -80px;
+    left: -80px;
+    opacity: 0.55;
+}
+
+body::after {
+    width: 400px;
+    height: 400px;
+    background: #2cb1bc;
+    bottom: -100px;
+    right: -100px;
+    opacity: 0.45;
+}
+
+/* ---------- CARTÃO ---------- */
+.card {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+/* ---------- FORMULÁRIO ---------- */
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #d6d6ff;
+}
+
+input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px 12px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #7f5af0;
+    box-shadow: 0 0 0 3px rgba(127, 90, 240, 0.35);
+}
+
+/* ---------- BOTÃO ---------- */
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(90deg, #7f5af0, #2cb1bc);
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(127, 90, 240, 0.5);
+}
+
+/* ---------- RESULTADO ---------- */
+.resultado {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 12px;
+    border-left: 6px solid;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.resultado p {
+    margin: 8px 0;
+}
+
+.resultado .situacao {
+    margin-top: 14px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Cores conforme a situação (classe escolhida pelo PHP) */
+.aprovado              { border-color: #2ecc71; }
+.aprovado .situacao    { color: #2ecc71; }
+
+.recuperacao           { border-color: #f1c40f; }
+.recuperacao .situacao { color: #f1c40f; }
+
+.reprovado             { border-color: #e74c3c; }
+.reprovado .situacao   { color: #e74c3c; }
