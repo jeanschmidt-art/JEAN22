@@ -1,11 +1,11 @@
 <?php
-// Variáveis iniciais: o resultado só existe depois do envio
+
 $enviado = false;
 $nome = $idade = "";
 $media = 0;
 $situacao = "";
 
-// Só processa se a página recebeu uma requisição POST
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $enviado = true;
 
