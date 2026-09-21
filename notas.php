@@ -2,16 +2,13 @@
 /* ==========================================================
    SISTEMA DE MÉDIA DO ALUNO - VERSÃO POST
    ========================================================== */
+   /* ---------- 1. FUNÇÕES ---------- */
 
-
-/* ---------- 1. FUNÇÕES ---------- */
-
-// Calcula a média ponderada (soma dos pesos = 2+3+1+1+3 = 10)
-function calcularMedia($n1, $n2, $n3, $n4, $n5)
+   
+function calcularmedia($n1, $n2, $n3, $n4, $n5)
 {
-    return ($n1 * 2 + $n2 * 3 + $n3 * 1 + $n4 * 1 + $n5 * 3) / 10;
+    return ($n1 * 2 + $n2 * 3 + $n3 * 1 + $n4 * 1 + $n5 *3) / 10;
 }
-
 // Decide a situação do aluno de acordo com a média
 function definirSituacao($media)
 {
@@ -24,15 +21,12 @@ function definirSituacao($media)
     }
 }
 
-
-/* ---------- 2. VARIÁVEIS INICIAIS ---------- */
 // Começam vazias: o resultado só existe depois do envio
 $enviado  = false;
 $nome     = "";
 $idade    = 0;
 $media    = 0;
 $situacao = "";
-
 
 /* ---------- 3. PROCESSAMENTO (somente se houve POST) ---------- */
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -46,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nota4 = (float) $_POST["nota4"];
     $nota5 = (float) $_POST["nota5"];
 
-    // 3.2 Calcular e classificar
+
     $media    = calcularMedia($nota1, $nota2, $nota3, $nota4, $nota5);
     $situacao = definirSituacao($media);
 
@@ -54,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+<html lang="pt-br"
+</head>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Média do Aluno (POST)</title>
     <style>
@@ -68,9 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </style>
 </head>
 <body>
-
     <h2>Cálculo de Média (método POST)</h2>
-
     <!-- ---------- FORMULÁRIO ---------- -->
     <form method="POST" action="">
 
@@ -117,3 +109,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 </body>
 </html>
+
