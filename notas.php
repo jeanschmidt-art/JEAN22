@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nota4 = (float) $_POST["nota4"];
     $nota5 = (float) $_POST["nota5"];
 
-    // Média ponderada (soma dos pesos = 2 + 3 + 1 + 1 + 3 = 10)
     $media = ($nota1 * 2 + $nota2 * 3 + $nota3 * 1 + $nota4 * 1 + $nota5 * 3) / 10;
 
     // A situação é decidida pelo PHP
