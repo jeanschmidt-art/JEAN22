@@ -116,13 +116,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 /* ---------- 1. FUNÇÕES ---------- */
 
 // Calcula a média ponderada (soma dos pesos = 2+3+1+1+3 = 10)
-function calcularMedia($n1, $n2, $n3, $n4, $n5)
+function calcularmedia($n1, $n2, $n3, $n4, $n5)
 {
     return ($n1 * 2 + $n2 * 3 + $n3 * 1 + $n4 * 1 + $n5 * 3) / 10;
 }
 
 // Decide a situação do aluno de acordo com a média
-function definirSituacao($media)
+function definirsituaçao($media)
 {
     if ($media >= 7) {
         return "APROVADO";
@@ -133,7 +133,6 @@ function definirSituacao($media)
     }
 }
 
-// Escolhe a classe de cor do resultado (também decidido pelo PHP)
 function definirClasse($media)
 {
     if ($media >= 7) {
@@ -146,8 +145,6 @@ function definirClasse($media)
 }
 
 
-/* ---------- 2. VARIÁVEIS INICIAIS ---------- */
-// Começam vazias: o resultado só existe depois do envio
 $enviado  = false;
 $nome     = "";
 $idade    = 0;
@@ -156,12 +153,10 @@ $situacao = "";
 $classe   = "";
 
 
-/* ---------- 3. PROCESSAMENTO (somente se houve envio via GET) ---------- */
-// Com GET, abrir a página também é uma requisição GET.
-// Por isso conferimos também se os dados chegaram (isset).
+
 if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["nome"])) {
 
-    // 3.1 Receber os dados
+
     $nome  = trim($_GET["nome"]);
     $idade = (int) $_GET["idade"];
     $nota1 = (float) $_GET["nota1"];
@@ -170,7 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["nome"])) {
     $nota4 = (float) $_GET["nota4"];
     $nota5 = (float) $_GET["nota5"];
 
-    // 3.2 Calcular e classificar
+
     $media    = calcularMedia($nota1, $nota2, $nota3, $nota4, $nota5);
     $situacao = definirSituacao($media);
     $classe   = definirClasse($media);
@@ -196,8 +191,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["nome"])) {
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             background-attachment: fixed;
         }
-
-        /* Bolhas de luz no fundo */
         body::before, body::after {
             content: "";
             position: fixed;
@@ -274,7 +267,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["nome"])) {
 
         <h2>📚 Cálculo de Média (GET)</h2>
 
-        <!-- ---------- FORMULÁRIO ---------- -->
+
         <form method="GET" action="">
 
             <label>Nome do aluno:
@@ -308,7 +301,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["nome"])) {
             <button type="submit">Enviar</button>
         </form>
 
-        <!-- ---------- RESULTADO (só aparece após o envio) ---------- -->
+
         <?php if ($enviado): ?>
             <div class="resultado <?= $classe ?>">
                 <p><strong>Nome:</strong> <?= htmlspecialchars($nome) ?></p>
@@ -321,26 +314,18 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["nome"])) {
     </div>
 
     <?php
-/* ==========================================================
-   SISTEMA DE MÉDIA DO ALUNO - notas.php (versão POST)
-   ========================================================== */
 
-
-/* ---------- 1. FUNÇÕES ---------- */
-
-// Calcula a média ponderada (soma dos pesos = 2+3+1+1+3 = 10)
 function calcularMedia($n1, $n2, $n3, $n4, $n5)
 {
     return ($n1 * 2 + $n2 * 3 + $n3 * 1 + $n4 * 1 + $n5 * 3) / 10;
 }
 
-// Valida se uma nota está entre 0 e 10
 function notaValida($nota)
 {
     return $nota >= 0 && $nota <= 10;
 }
 
-// Decide a situação do aluno, considerando média e frequência
+
 function definirSituacao($media, $frequencia)
 {
     if ($media >= 7 && $frequencia < 75) {
@@ -362,7 +347,6 @@ function definirSituacao($media, $frequencia)
     return "REPROVADO";
 }
 
-// Escolhe a classe de cor do resultado (também decidido pelo PHP)
 function definirClasse($situacao)
 {
     if ($situacao === "APROVADO" || $situacao === "APROVADO COM EXCELÊNCIA") {
@@ -373,19 +357,18 @@ function definirClasse($situacao)
         return "recuperacao";
     }
 
-    // REPROVADO ou REPROVADO POR FREQUÊNCIA
+
     return "reprovado";
 }
 
-// Calcula quantos pontos faltam para a média 7 (só faz sentido abaixo de 7)
+
 function pontosFaltantes($media)
 {
     return 7 - $media;
 }
 
 
-/* ---------- 2. VARIÁVEIS INICIAIS ---------- */
-// Começam vazias: o resultado só existe depois do envio
+
 $enviado  = false;
 $erro     = "";
 $nome     = "";
@@ -397,10 +380,9 @@ $faltam   = null;
 $frequencia = 0;
 
 
-/* ---------- 3. PROCESSAMENTO (somente se houve POST) ---------- */
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    // 3.1 Receber os dados
     $nome       = trim($_POST["nome"]);
     $idade      = (int) $_POST["idade"];
     $nota1      = (float) $_POST["nota1"];
