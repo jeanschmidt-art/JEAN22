@@ -404,13 +404,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $erro = "A frequência deve estar entre 0% e 100%.";
     }
 
-    // 3.3 Só calcula se passou nas validações
+
     if ($erro === "") {
         $media    = calcularMedia($nota1, $nota2, $nota3, $nota4, $nota5);
         $situacao = definirSituacao($media, $frequencia);
         $classe   = definirClasse($situacao);
 
-        // Pontos que faltam só fazem sentido quando a média é menor que 7
+
         if ($media < 7) {
             $faltam = pontosFaltantes($media);
         }
