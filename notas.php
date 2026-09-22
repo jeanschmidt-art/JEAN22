@@ -447,78 +447,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 
-    <div class="card">
 
-        <h2>📚 Cálculo de Média</h2>
-
-        <!-- ---------- FORMULÁRIO ---------- -->
-        <form method="POST" action="">
-
-            <label>Nome do aluno:
-                <input type="text" name="nome" required>
-            </label>
-
-            <label>Idade:
-                <input type="number" name="idade" min="1" required>
-            </label>
-
-            <label>Nota 1 (peso 2):
-                <input type="number" name="nota1" step="0.1" min="0" max="10" required>
-            </label>
-
-            <label>Nota 2 (peso 3):
-                <input type="number" name="nota2" step="0.1" min="0" max="10" required>
-            </label>
-
-            <label>Nota 3 (peso 1):
-                <input type="number" name="nota3" step="0.1" min="0" max="10" required>
-            </label>
-
-            <label>Nota 4 (peso 1):
-                <input type="number" name="nota4" step="0.1" min="0" max="10" required>
-            </label>
-
-            <label>Nota 5 (peso 3):
-                <input type="number" name="nota5" step="0.1" min="0" max="10" required>
-            </label>
-
-            <label>Frequência (%):
-                <input type="number" name="frequencia" step="0.1" min="0" max="100" required>
-            </label>
-
-            <button type="submit">Enviar</button>
-        </form>
-
-        <!-- ---------- MENSAGEM DE ERRO ---------- -->
-        <?php if ($enviado && $erro !== ""): ?>
-            <div class="resultado erro">
-                <p><?= htmlspecialchars($erro) ?></p>
-            </div>
-        <?php endif; ?>
-
-        <!-- ---------- RESULTADO (só aparece após envio válido) ---------- -->
-        <?php if ($enviado && $erro === ""): ?>
-            <div class="resultado <?= $classe ?>">
-                <p><strong>Nome:</strong> <?= htmlspecialchars($nome) ?></p>
-                <p><strong>Idade:</strong> <?= $idade ?> anos</p>
-                <p><strong>Média:</strong> <?= number_format($media, 2, ",", ".") ?></p>
-                <p><strong>Frequência:</strong> <?= number_format($frequencia, 1, ",", ".") ?>%</p>
-
-                <?php if ($faltam !== null): ?>
-                    <p>Faltaram <?= number_format($faltam, 2, ",", ".") ?> pontos para atingir a média 7.</p>
-                <?php endif; ?>
-
-                <p class="situacao"><?= $situacao ?></p>
-            </div>
-        <?php endif; ?>
-
-    </div>
-
-</body>
-</html>
-
-</body>
-</html>
 
 </body>
 </html>
