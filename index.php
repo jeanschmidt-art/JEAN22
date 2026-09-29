@@ -9,7 +9,7 @@
    idade INT)";
 
    $pdo->exec($sql);
-   echo "<br>Tabela criada com seucesso"; 
+   echo "<br> Tabela criada com seucesso"; 
    ?>
 
 
