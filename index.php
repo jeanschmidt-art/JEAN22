@@ -8,7 +8,7 @@
    nome VARCHAR(100),
    idade INT)";
 
-   $pdo->exerc($sql);
+   $pdo->exec($sql);
    echo "<br>Tabela criada com seucesso"; 
    ?>
 
