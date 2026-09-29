@@ -7,7 +7,7 @@ $pdo->exec("CREATE TABLE IF NOT EXISTS jogos (
     nome VARCHAR(100),
     genero VARCHAR(50),
     nota INT,
-    ano_lancamento INT
+    ano_lançamento INT
 )");
 
 // Se a tabela já existia (criada na versão sem o campo), adiciona a coluna
