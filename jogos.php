@@ -24,27 +24,27 @@ $genero = $_POST["genero"];
 $nota = $_POST["nota"];
 
 // Cadastrar jogo
-$sql = "INSERT INTO jogos (nome, genero, nota,)
-        VALUES ('$nome', '$genero','$nota')";
+// $sql = "INSERT INTO jogos (nome, genero, nota,)
+//         VALUES ('$nome', '$genero','$nota')";
 
-      $pdo->exec($sql);
-      echo "debug 4";
+//       $pdo->exec($sql);
+//       echo "debug 4";
 
-      echo "Jogo cadastrado com sucesso!";
+//       echo "Jogo cadastrado com sucesso!";
 
 }
 
       // Buscar todos os jogos ristrados no banco de dados 
-      $buscar = "SELECT * FROM jogos";
+    //   $buscar = "SELECT * FROM jogos";
 
-      //exerc() = executa algo quando voce NÃO precisa registros de volta 
-      // query() = executa uma consulta quando voce QUER receber dados de volta
-      $stat = $pdo->query($buscar);
-      echo "debug 5";
+    //   //exerc() = executa algo quando voce NÃO precisa registros de volta 
+    //   // query() = executa uma consulta quando voce QUER receber dados de volta
+    //   $stat = $pdo->query($buscar);
+    //   echo "debug 5";
 
-      // fetchAll = buscar todos os registros 
-      $jogos = $stmt->fetchAll (PDO::FETCH_ASSOC);
-      echo "debug 6";
+    //   // fetchAll = buscar todos os registros 
+    //   $jogos = $stmt->fetchAll (PDO::FETCH_ASSOC);
+    //   echo "debug 6";
 ?>
 
 <!DOCTYPE html>
