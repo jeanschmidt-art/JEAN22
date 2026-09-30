@@ -4,16 +4,16 @@ require "conexao.php";
 echo "debug 1";
 
 //Cria a tabela 
-$sqla = "CREATE TABLE IF NOT EXISTS jogos (
-id INT AUTO_INCREMENT PRIMARY KEY,
-nome VARCHAR(100),
-genero VARCHAR(50),
-nota INT
-);";
+// $sqla = "CREATE TABLE IF NOT EXISTS jogos (
+// id INT AUTO_INCREMENT PRIMARY KEY,
+// nome VARCHAR(100),
+// genero VARCHAR(50),
+// nota INT
+// );";
 
-echo "$sqla";
-$pdo->exec($sqla);
-echo "debug 2";
+// echo "$sqla";
+// $pdo->exec($sqla);
+// echo "debug 2";
 
 //Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
