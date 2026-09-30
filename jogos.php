@@ -43,7 +43,7 @@ $nota = $_POST["nota"];
       echo "debug 5";
 
       // fetchAll = buscar todos os registros 
-      $jogos = $stmt->fetchAll (PDO::FETCH_ASSOC);
+      $jogos = $stat->fetchAll (PDO::FETCH_ASSOC);
       echo "debug 6";
 ?>
 
