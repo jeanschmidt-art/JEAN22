@@ -5,13 +5,13 @@ echo "debug 1";
 
 //Cria a tabela 
 $sql = "CREATE TABLE IF NOT EXISTS jogos (
-id INT PRIMARY KEY AUTO_INCREMENT,
+id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100),
 genero VARCHAR(50),
 nota INT
 )";
 
-$pdo->exec($sql);
+$pdo->exec("CREATE TABLE IF NOT EXISTS jogoss (id INT, nome VARCHAR(100)");
 echo "debug 2";
 
 //Verifica se o formulário foi enviado
