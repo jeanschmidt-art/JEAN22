@@ -3,7 +3,7 @@ require "conexao.php";
 
 echo "Meu sistema está Conectado";
 
-$SQL = "CREATE TABLE IF NOT EXISTS teste (;
+$sql = "CREATE TABLE IF NOT EXISTS teste (;
    id INT AUTO_INCREMENT PRIMARY KEY,
    nome VARCHAR(100),
    idade INT)";
