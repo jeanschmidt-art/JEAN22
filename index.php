@@ -1,18 +1,16 @@
-<?php 
-   require "conexao.php";
+<?php
+require "conexao.php";
 
-   echo "Meu sistema está Conectado";
+echo "Meu sistema está Conectado";
 
-   $SQL = "CREATE TABLE IF NOT EXISTS teste (;
+$SQL = "CREATE TABLE IF NOT EXISTS teste (;
    id INT AUTO_INCREMENT PRIMARY KEY,
    nome VARCHAR(100),
    idade INT)";
 
-   $pdo->exec($sql);
-   echo "<br> Tabela criada com seucesso"; 
-   ?>
-
-
+$pdo->exec($sql);
+echo "<br> Tabela criada com seucesso";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +20,9 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="idade.php">VERIFICADOR DE IDADE</a>
+<a href="idade.php">VERIFICADOR DE IDADE</a>
     <a href="notas.php">VERIFICADOR DE notas</a>
-    <a href="jogos.php">Login basico</a> 
-
+    <a href="login-basico.php">Login basico</a> 
+    <a href="jogos.php">Jogos</a> 
+</body>
+</html>
