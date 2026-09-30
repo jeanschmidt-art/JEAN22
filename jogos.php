@@ -2,6 +2,7 @@
 
 require "conexao.php";
 echo "debug 1";
+echo "$pdo";
 
 //Cria a tabela 
 // $sqla = "CREATE TABLE IF NOT EXISTS jogos (
@@ -39,11 +40,11 @@ $nota = $_POST["nota"];
 
       //exerc() = executa algo quando voce NÃO precisa registros de volta 
       // query() = executa uma consulta quando voce QUER receber dados de volta
-      $stat = $pdo->query($buscar);
+      $stmt = $pdo->query($buscar);
       echo "debug 5";
 
       // fetchAll = buscar todos os registros 
-      $jogos = $stat->fetchAll (PDO::FETCH_ASSOC);
+      $jogos = $stmt->fetchAll (PDO::FETCH_ASSOC);
       echo "debug 6";
 ?>
 
