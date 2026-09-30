@@ -12,11 +12,12 @@ nota INT
 )";
 
 $pdo->exec($sql);
-echo "debug 2;
+echo "debug 2";
 
 //Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-echo "debug 3;
+echo "debug 3";
+
 $nome = $_POST["nome"];
 $genero = $_POST["genero"];
 $nota = $_POST["nota"];
