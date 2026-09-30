@@ -1,6 +1,7 @@
 <?php
 
 require "conexao.php";
+echo "debug 1";
 
 //Cria a tabela 
 $sql = "CREATE TABLE IF NOT EXISTS jogos (
@@ -11,10 +12,11 @@ nota INT
 )";
 
 $pdo->exec($sql);
+echo "debug 2;
 
 //Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "post") {
-
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+echo "debug 3;
 $nome = $_POST["nome"];
 $genero = $_POST["genero"];
 $nota = $_POST["nota"];
@@ -24,6 +26,7 @@ $sql = "INSERT INTO jogos (nome, genero, nota,)
         VALUES ('$nome', '$genero','$nota')";
 
       $pdo->exec($sql);
+      echo "debug 4";
 
       echo "Jogo cadastrado com sucesso!";
 
