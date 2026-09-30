@@ -9,9 +9,9 @@ id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100),
 genero VARCHAR(50),
 nota INT
-)";
+);";
 
-$pdo->exec("CREATE TABLE IF NOT EXISTS jogoss (id INT, nome VARCHAR(100)");
+$pdo->exec($sql);
 echo "debug 2";
 
 //Verifica se o formulário foi enviado
