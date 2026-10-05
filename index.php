@@ -30,8 +30,33 @@
           <a href="#projetos" class="botao">
               Ver meus projetos
           </a>
-
+ 
+          <section id="contato" class="secao secao-destaque">
+            <h2 class="titulo-secao">Contato</h2>
+            <p class="subtitulo-secao">
+                Quer entrar em contato comigo?
+</p>
+<div class="contato-container">
+</div class="contato-item">
+<h3>whatsapp</h3>
+<p>+55 41 99742-8031</p>
+</div>
+<div class="contato-item">
+    <h3>Github</h3>
+    <p>Github.com/lookdev-jean</p>
+</div>
+<div class="contato-item">
+    <h3>LinkedIn</h3>
+    <p>linkedin.com/in/jeanrafael</p>
+</div>
 </div>
      </section>
+</main>
+<footer>
+    <p> 
+        Desenvolvimento por <a href="https://jean315">Jean rafael</a> . 2026
+    </p>
+</footer>
 </body>
+
 </html>
