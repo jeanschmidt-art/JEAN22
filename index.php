@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-<a href="idade.php">VERIFICADOR DE IDADE</a>
-    <a href="notas.php">VERIFICADOR DE notas</a>
-    <a href="login-basico.php">Login basico</a> 
-    <a href="jogos.php">Jogos</a> 
+<a href=".php">VERIFICADOR DE IDADE</a>
+    <a href="projetos/idade.php">VERIFICADOR DE notas</a>
+    <a href="projetos/notas.php">Login basico</a> 
+    <a href="projetos/jogos.php">Jogos</a> 
 </body>
 </html>
