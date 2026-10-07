@@ -49,7 +49,7 @@
 
 </div class="idade">
 <label for="idade"> Idade:</label>
-<input type="number" id="idade" name="idade" placeholder= "min=0" required>
+<input type="number" id="idade" name="idade" placeholder= "SUA IDADE" required>
 
 </div class="curso">
 <label for="curso"> Curso:</label>
