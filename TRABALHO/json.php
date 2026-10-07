@@ -38,13 +38,24 @@
     <title>Document</title>
 </head>
 <body>
+
     <div class="Formulario">
         <h2 id="titulo">Formulario</h2>
         <form action="" method="POST"></form>
 
 </div class="nome">
 <label for="nome"> Nome:</label>
-<input type="text" id="name" name="nome"required>
+<input type="text" id="name" name="nome" placeholder="DIGITE SEU NOME COMPLETO"required>
+
     
+</form>
+
+<h2>ALUNOS CADASTRADOS</h2>
+<?php foreach($alunos as $aluno) { ?>
+     <h3><?= $aluno["nome"] ?></h3>
+     <p>Idade: <?= $aluno["idade"] ?></p>
+     <p>Curso: <?= $aluno["curso"] ?></p>
+ <?php } ?>
+
 </body>
 </html>
