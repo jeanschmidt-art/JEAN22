@@ -47,6 +47,15 @@
 <label for="nome"> Nome:</label>
 <input type="text" id="name" name="nome" placeholder="DIGITE SEU NOME COMPLETO"required>
 
+</div class="idade">
+<label for="idade"> Idade:</label>
+<input type="number" id="idade" name="idade" placeholder= "min=0" required>
+
+</div class="curso">
+<label for="curso"> Curso:</label>
+<input type="text" id="curso" name="curso" placeholder="DIGITE SEU CURSO"required>
+<button>ENVIAR DADOS</button>
+
     
 </form>
 
