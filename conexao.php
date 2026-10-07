@@ -24,4 +24,4 @@ try {
     echo "Conectado com Sucesso";
 } catch (PDOException $erro) {
     echo "erro ao Conectar:" . $erro->getMessage();
-}
+} 
