@@ -38,6 +38,13 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="Formulario">
+        <h2 id="titulo">Formulario</h2>
+        <form action="" method="POST"></form>
+
+</div class="nome">
+<label for="nome"> Nome:</label>
+<input type="text" id="name" name="nome"required>
     
 </body>
 </html>
