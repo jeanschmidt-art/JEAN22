@@ -79,4 +79,6 @@ $Guerreiro = new Guerreiro("Jean", 100, 10);
 
 $Guerreiro->atacar(); //Método Herdado
 $Guerreiro->defender();//Métedo Próprio
+
+// https://look.devlook.xyz/recurces/views/projetos/poo.php
 ?>
