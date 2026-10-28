@@ -13,13 +13,13 @@ abstract class Maquina {
     public function __construct($nome)
     {
         $this->nome = $nome;
-        $this->producao = 0;
+        $this->produção = 0;
         
     }
 
     // ENCAPSULAMENTO - GETTER
     public function getProducao() {
-        return $this->producao;
+        return $this->produção;
     }
 
     //ENCAPSULAMENTO - ALTERAÇÃO CONTROLADA
@@ -28,7 +28,7 @@ abstract class Maquina {
             return false;
         }
 
-        $this->producao += $quantidade;
+        $this->produção += $quantidade;
         return true;
     }
 
@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     }
 
     // EXECUTANDO OS MÉTODOS DO OBJETO
-    $maquina->redistrarProducao($quantidade);
+    $maquina->registrarProducao($quantidade);
 
     // GUARDADO O OBJETO NA SESSÃO
     $_SESSION["maquinas"][] = $maquina;
