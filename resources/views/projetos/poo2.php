@@ -106,7 +106,7 @@ function escapar($texto) {
         ENT_QUOTES,
         "UTF-8");
     
-    }
+    }  
 ?>
 
 
