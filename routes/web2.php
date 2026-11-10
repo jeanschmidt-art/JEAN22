@@ -18,7 +18,7 @@ return [
         'notas' => [new NotasController(), 'index'],
         'login' => [new LoginController(), 'index'],
         'idade' => [new IdadeController(), 'index'],
-
+        require_once __DIR__ . '/../app/Http/Controllers/JogosController.php';
 
         
          //outras atividades...
