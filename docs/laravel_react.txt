@@ -1,0 +1,14 @@
+npm install react@^19 react-dom@^19
+npm install @inertiajs/react@^2
+npm install -D @vitejs/plugin-react@^5
+
+-p resources/js/Pages
+-p resources/js/Components
+-p resources/js/Layouts
+ls resources/js
+composer show inertiajs/inertia-laravel
+npm list react react-dom @inertiajs/react vite @vitejs/plugin-react
+
+INERTIA = PONTE ENTRE BACK E FRONT
+VITE = PROCESSA E COMPILA O FRONT
+LARAVEL = BACKEND | REACT = FRONTEND
